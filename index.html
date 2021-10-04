@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <script src="https://kit.fontawesome.com/44bca1acc7.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <title>Naadir Al Atilla</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+        ::-webkit-scrollbar {
+            width: 12.5px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #cfd8dc;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #90a4ae;
+            border-radius: 6px;
+            border: 3.2px solid #cfd8dc;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #89979e;
+        }
+        ::-webkit-scrollbar-thumb:active {
+            background: #69747a;
+        }
+
+        html * {
+            padding: 0;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .header-container {
+            color: #fafafa;
+            background-color: #040014;
+            width: 100%;
+            position: fixed;
+            display: flex;
+            justify-content: space-evenly;
+            z-index: 1;
+        }
+        .header-box {
+            width: 50%;
+            padding: .9rem 0;
+            display: inline-block;
+        }
+        .header-box-right {
+            text-align: right;
+        }
+        .header {
+            margin-left: 15%;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+        .header-links {
+            color: #fafafa;
+            font-family: 'Mulish', sans-serif;
+            letter-spacing: 1.2px;
+            font-size: 1.1rem;
+            margin-right: 5%;
+            text-decoration: none;
+        }
+        .most-right-link {
+            margin-right: 25%;
+        }
+        .banner-container {
+            position: relative;
+            height: 450px;
+            background-image: url('https://i.ibb.co/LPG8khx/banner.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position-y: 20px;
+        }
+        .profile-img {
+            position: absolute;
+            left: 50%;
+            top: 45%;
+            transform: translate(-50%, -50%);
+            height: 275px;
+            width: 275px;
+            border: 7px solid #040014;
+            border-radius: 138px;
+        }
+        .quote-container {
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            display: inline-block;
+            margin: 35px auto;
+            background-color: #040014;
+            border-radius: 5px;
+        }
+        .quote-box {
+            position: relative;
+            bottom: 2px;
+            background-color: white;
+            padding: 7px 20px;
+            border-radius: 5px;
+            transform: scaleX(1.005);
+        }
+        .quote {
+            font-family: 'Roboto Mono', monospace;
+        }
+        .content-container {
+            position: relative;
+            margin: 75px auto 0 auto;
+            width: 75%;
+            padding: 20px 40px;
+        }
+        .content-desc {
+            font-size: 35px;
+            font-family: 'Roboto Mono', monospace;
+            margin-left: 30px;
+            margin-bottom: 10px;
+            color: #070025;
+        }
+        .content-line {
+            border: none;
+            background-color: #070025;
+            height: 3px;
+        }
+        #typed-strings {
+            position: relative;
+        }
+        #typed {
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 45px;
+            font-family: 'Roboto Mono', monospace;
+            padding: 0 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            text-align: center;
+        }
+        .profile-overlay {
+            background-color: rgba(0, 0, 0, 0.8);
+            height: 100px;
+
+        }
+        .inner-content-box {
+            position: relative;
+        }
+        .content-text {
+            width: 60%;
+            text-align: justify;
+            font-family: 'Mulish', sans-serif;
+            padding: 0 15px;
+            font-size: 19px;
+            line-height: 25px;
+        }
+        .about-text {
+            margin-top: 40px;
+            position: absolute;
+            right: 25px;
+            top: 55%;
+            transform: translateY(-50%);
+            padding-bottom: 25px;
+        }
+        .side-img {
+            width: 25%;
+            height: 25%;
+            margin-top: 30px;
+            margin-left: 30px;
+            border: 2.5px solid #070025;
+            border-radius: 5px;
+        }
+        .inner-projects-box {
+            margin-top: 15px;
+            text-align: center;
+            width: 100%;
+        }
+        .projects {
+            position: relative;
+            width: 30%;
+            height: 130px;
+            display: inline-block;
+            margin: 10px;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+        }
+        .projects:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 18px rgba(0, 0, 0, 0.4);
+        }
+        #project1 {
+            background: url('https://i.ibb.co/ncS80fs/order-Makanan.png');
+            background-size: cover;
+        }
+        #project2 {
+            background: url('https://i.ibb.co/VjcHxTg/penumpang.png');
+            background-size: cover;
+        }
+        #project3 {
+            background: url('https://i.ibb.co/CMWMTRr/toDo.png');
+            background-size: cover;
+        }
+        .project-overlay {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            transition: 0.3s;
+        }
+        .project-overlay:hover {
+            background-color: rgba(4, 0, 20, 0.7);
+        }
+        .project-overlay:hover > .project-icon {
+            font-size: 70px;
+            opacity: 1;
+        }
+        .project-overlay:hover > .project-name {
+            opacity: 1;
+        }
+        .project-icon {
+            color: #040014;
+            position: absolute;
+            left: 50%;
+            top: 10px;
+            transform: translateX(-50%);
+            font-size: 35px;
+            transition: 0.3s;
+            opacity: 0;
+        }
+        .project-name {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            border-radius: 0 0 15px 15px;
+            text-align: center;
+            width: 100%;
+            background-color: rgba(4, 0, 20, 0.8);
+            padding: 7px 0;
+            opacity: 0;
+            transition: 0.3s;
+        }
+        .project-text {
+            border: 4px solid #040014;
+            display: inline-block;
+            text-decoration: none;
+            color: #040014;
+            margin-top: 20px;
+            padding: 12px;
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+        .project-text:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 18px rgba(0, 0, 0, 0.4);
+        }
+        .project-text > h2 {
+            display: inline;
+        }
+        .project-text > i {
+            font-size: 32px;
+        }
+        .inner-skills-box {
+            position: relative;
+            text-align: center;
+            margin-top: 15px;
+            width: 100%;
+        }
+        .skills {
+            color: #fafafa;
+            position: relative;
+            width: 15%;
+            display: inline-block;
+            margin: 15px;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+            background-color: #040014;
+        }
+        .skills:hover {
+            box-shadow: 0 7px 18px rgba(0, 0, 0, 0.4);
+            transform: scale(1.05);
+        }
+        .skill-icon {
+            position: absolute;
+            top: 15px;
+            transform: translateX(-50%);
+            font-size: 70px;
+        }
+        .skill-texts {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .skill-desc {
+            bottom: 35px;
+        }
+        .skill-exp {
+            bottom: 15px;
+        }
+        .skill-img {
+            position: absolute;
+            top: 15px;
+            transform: translateX(-50%);
+            width: 65px;
+            height: 65px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-container">
+            <div class="header-box-left header-box">
+                <h3 class="header" onclick="refreshPage()">Portfolio</h3>
+            </div>
+            <div class="header-box-right header-box">
+                <a href="#about" class="header-links">About</a>
+                <a href="#skills" class="header-links">Skills</a>
+                <a href="#projects" class="header-links">Projects</a>
+                <a href="#" class="header-links most-right-link">Contact</a>
+            </div>
+        </div>
+        <div class="banner-container" id="banner-container">
+            <div class="profile">
+                <img src="https://i.ibb.co/SJjPyjf/Profile.jpg" alt="Naadir Al Atilla" class="profile-img">
+                <span id="typed"></span>
+            </div>
+        </div>
+        <div class="quote-container">
+            <div class="quote-box">
+                <p class="quote" id="quote">"Unleash your imagination, and be an inspiration"</p>
+            </div>
+        </div>
+        <div class="content-container about-box" data-aos="fade-up" id="about">
+            <h1 class="content-desc">About</h1>
+            <hr class="content-line">
+            <div class="inner-content-box" data-aos="fade-up">
+                <img src="https://i.ibb.co/Fnk0X2N/Side.png" class="side-img" alt="Naadir Al Atilla">
+                <p class="content-text about-text">
+                    Halo, nama saya Naadir Al Atilla, sering dipanggil sebagai Atilla atau Til. Mulai masuk ke dunia programming 
+                    sejak kelas 6 SD. Bahasa pertama yang dipelajari adalah HTML, lalu bergerak ke CSS, dan saat ini sedang 
+                    mempelajari JavaScript dan library JQuery.
+                </p>
+            </div>
+        </div>
+        <div class="content-container skills-box" id="skills" data-aos="fade-up">
+            <h1 class="content-desc">Skills</h1>
+            <hr class="content-line">
+            <div class="inner-content-box inner-skills-box" data-aos="fade-up">
+                <div class="skills" id="skill1">
+                    <i class="fab fa-html5 skill-icon"></i>
+                    <h3 class="skill-desc skill-texts">HTML5</h3>
+                    <p class="skill-exp skill-texts">2 &lt; years</p>
+                </div>
+                <div class="skills" id="skill2">
+                    <i class="fab fa-css3-alt skill-icon"></i>
+                    <h3 class="skill-desc skill-texts">CSS3</h3>
+                    <p class="skill-exp skill-texts">2 &lt; years</p>
+                </div>
+                <div class="skills" id="skill3">
+                    <i class="fab fa-js-square skill-icon"></i>
+                    <h3 class="skill-desc skill-texts">JavaScript</h3>
+                    <p class="skill-exp skill-texts">1 year</p>
+                </div>
+                <div class="skills" id="skill4">
+                    <img src="https://i.ibb.co/q0Vywcd/jquery1.png" alt="JQuery" class="skill-img">
+                    <h3 class="skill-desc skill-texts">JQuery</h3>
+                    <p class="skill-exp skill-texts">1 &lt; year</p>
+                </div>
+            </div>
+        </div>
+        <div class="content-container projects-box" data-aos="fade-up" id="projects">
+            <h1 class="content-desc">Projects</h1>
+            <hr class="content-line">
+            <div class="inner-content-box inner-projects-box" data-aos="fade-up">
+                <div class="projects" id="project1" data-value="Order-Makanan">
+                    <div class="project-overlay">
+                        <i class="fas fa-hamburger project-icon"></i>
+                        <span class="project-name">Order Makanan</span>
+                    </div>
+                </div>
+                <div class="projects" id="project2" data-value="Pengelolaan-Penumpang">
+                    <div class="project-overlay">
+                        <i class="fas fa-bus project-icon"></i>
+                        <span class="project-name">Pengelolaan Penumpang</span>
+                    </div>
+                </div>
+                <div class="projects" id="project3" data-value="To-Do-List">
+                    <div class="project-overlay">
+                        <i class="fas fa-th-list project-icon"></i>
+                        <span class="project-name">To Do List</span>
+                    </div>
+                </div>
+                <br>
+                <a href="https://github.com/NavdPlay/" class="project-text">
+                    <i class="fab fa-github"></i>
+                    <h2>GitHub Repositories</h2>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        var ch = $('.skills').width();
+        $('.skills').css({'height': ch+'px'});
+
+        $('.projects').click(function() {
+            var rep = $(this).attr('data-value');
+            window.open('https://navdplay.github.io/' + rep + '/');
+        });
+
+        var typed = new Typed('#typed', {
+            strings: ['Naadir Al Ari', 'Naadir Al Atilla'],
+            backSpeed: 55,
+            typeSpeed: 55,
+            backDelay: 25
+        });
+
+        function refreshPage() {
+            location.replace('index.html');
+        }
+    </script>
+</body>
+</html>
