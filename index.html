@@ -19,7 +19,7 @@
         }
         ::-webkit-scrollbar-track {
             background: #cfd8dc;
-        }
+        }   
         ::-webkit-scrollbar-thumb {
             background: #90a4ae;
             border-radius: 6px;
@@ -41,14 +41,14 @@
             scroll-behavior: smooth;
         }
         .header-container {
-            height: 4.7vw;
+            height: 47px;
             color: #fafafa;
             background-color: #040014;
             width: 100%;
             position: fixed;
             display: flex;
             justify-content: space-evenly;
-            z-index: 1;
+            z-index: 2;
             box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
         }
         .header-box {
@@ -62,6 +62,30 @@
         }
         .header-box-left {
             position: relative;
+        }
+        #menu-icon-box {
+            display: none;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 5vh;
+        }
+        .dropdown-container {
+            color: white;
+            position: absolute;
+            right: 15px;
+            background-color: #040014;
+            height: 100px;
+            width: 100px;
+            z-index: 1;
+            text-align: center;
+            transition: 0.3s;
+        }
+        .dropdown-links {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 15px 0;
         }
         .links-box {
             position: absolute;
@@ -380,6 +404,18 @@
             transition: 0.3s;
             cursor: pointer;
         }
+        .footer-box:nth-child(1) {
+            right: 15px;
+        }
+        .footer-box:nth-child(2) {
+            right: 5px;
+        }
+        .footer-box:nth-child(3) {
+            left: 5px;
+        }
+        .footer-box:nth-child(4) {
+            left: 15px;
+        }
         .footer-box:hover {
             transform: scale(1.1);
         }
@@ -437,54 +473,154 @@
             }
         }
         @media only screen and (max-width: 1024px) {
-            .skills {
+            /* .skills {
                 height: 15.3vw;
                 width: 15.3vw;
                 margin: 1vw;
-            }
+            } */
             .category-desc {
                 font-size: 3.12vw;
             }
-        }
-        @media only screen and (max-width: 768px) {
-            .header-container {
-                height: 5.3vw;
+            .header-links {
+                font-size: 16px;
             }
             .links-box {
-                width: 27vw;
+                width: 100%;
+            }
+            .content-text {
+                font-size: 1.75vw;
+                line-height: 2.45vw;
+            }
+            .side-img {
+                width: 19.23vw;
+                height: 19.23vw;
+            }
+            #typed {
+                font-size: 4.4vw;
+            }
+        }
+        @media only screen and (max-width: 768px) {
+            .links-box {
+                display: none;
             }
             .header-links {
                 font-size: 1.85vw;
             }
             .header {
-                font-size: 2vw;
+                font-size: 17.6px;
             }
             .skills {
-                width: 17.4vw;
-                height: 17.4vw;
+                width: 25vw;
+                height: 25vw;
             }
             .skill-icon {
-                font-size: 7.5vw;
+                font-size: 12vw;
                 top: 2.95vw;
             }
             #skill-divide-2 {
                 display: block;
             }
             .skill-desc {
-                bottom: 4.2vw;
-                font-size: 2.11vw;
+                bottom: 5vw;
+                font-size: 2.7vw;
+            }
+            .skill-exp {
+                bottom: 2.5vw;
+                font-size: 2.2vw;
+            }
+            .skill-img {
+                width: 11vw;
+                height: 11vw;
+                margin-top: 8px;
+            }
+            .side-img {
+                margin-left: 2.5vw;
+                margin-top: 9.75vw;
+
+            }
+            .content-text {
+                width: 43vw;
+                font-size: 16px;
+            }
+            .content-container {
+                margin-top: 8.85vw;
+            }
+            #typed {
+                font-size: 27px;
+                top: 85%;
+                width: 310px;
+            }
+            .banner-container {
+                height: 410px;
+            }
+            #menu-icon-box {
+                display: initial;
+            }
+            .profile-img {
+                top: 48%;
+                height: 250px;
+                width: 250px;
+            }
+        }
+        @media only screen and (max-width: 596px) {
+            .skills {
+                width: 22vw;
+                height: 22vw;
+            }
+            .skill-desc {
+                bottom: 5.2vw;
+                font-size: 2.25vw;
             }
             .skill-exp {
                 bottom: 1.75vw;
-                font-size: 1.89vw;
+                font-size: 2.35vw;
             }
             .skill-img {
                 width: 7.68vw;
                 height: 7.68vw;
             }
+            .skill-icon {
+                font-size: 9vw;
+                top: 2vw;
+            }
+            .banner-container {
+                height: 356px;
+            }
+            .content-text {
+                width: 100%;
+                font-size: 16px;
+                left: 50%;
+                top: 160px;
+                transform: translate(-50%, 0);
+                line-height: 17.5px;
+            }
+            .side-img {
+                margin-top: 30px;
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%, 0);
+                height: 135px;
+                width: 135px;
+            }
+            .side-img:hover {
+                transform: translate(-50%, 0) scale(1.05);
+            }
+            .skills-box {
+                margin-top: 300px;
+            }
+            .project-name {
+                font-size: 13px;
+            }
+            .profile-img {
+                top: 48%;
+                height: 210px;
+                width: 210px;
+            }
         }
-        /* @media only screen and (max-width: 596px) {
-
+        /* @media only screen and (max-width: 425px) {
+            .header-container {
+                height: 6.8vh;
+            }
         } */
     </style>
 </head>
@@ -495,12 +631,20 @@
                 <h3 class="header" onclick="refreshPage()">Portfolio</h3>
             </div>
             <div class="header-box-right header-box">
+                <div id="menu-icon-box">
+                    <i class="fas fa-bars" id="menu-icon" onclick="mobileNavbar(this)"></i>
+                </div>
                 <div class="links-box">
                     <a href="#about" class="header-links">About</a>
                     <a href="#skills" class="header-links">Skills</a>
                     <a href="#projects" class="header-links most-right-link">Projects</a>
                 </div>
             </div>
+        </div>
+        <div class="dropdown-container">
+            <a href="#about" class="dropdown-links">About</a>
+            <a href="#skills" class="dropdown-links">Skills</a>
+            <a href="#projects" class="dropdown-links most-bottom-link">Projects</a>
         </div>
         <div class="banner-container" id="banner-container">
             <div class="profile">
@@ -598,7 +742,7 @@
             <div class="footer-box" onclick="discordRedir()">
                 <i class="fab fa-discord footer-icon"></i>
             </div>
-            <p class="copyright">© NavdPlay All Right Reserved.</p>
+            <p class="copyright"></p>
         </div>
     </div>
 
@@ -606,6 +750,7 @@
     <script>
         AOS.init();
 
+        var navbarOpen = false;
         var exp = {
             html: 2019,
             css: 2019,
@@ -626,11 +771,40 @@
         $('#css-exp').html(`${currentYear - exp.css} > years`);
         $('#js-exp').html(`${currentYear - exp.js} years`);
         $('#jquery-exp').html(`${currentYear - exp.jquery} > years`);
+        $('.copyright').html(`© ${currentYear} NavdPlay. All Rights Reserved`);
 
         $('.projects').click(function() {
             var rep = $(this).attr('data-value');
             window.open('https://navdplay.github.io/' + rep + '/');
         });
+
+        var headHeight = $('.header-container').height();
+        var dropLinkHeight = $('.dropdown-links').height();
+        var dropHeight = ((dropLinkHeight + 35) * 3);
+
+        $('.dropdown-container').css({
+            'height': dropHeight + 'px',
+            'top': '-' + dropHeight + 'px'
+        });
+
+
+        function mobileNavbar(x) {
+            if (navbarOpen) {
+                x.classList.remove('fa-times');
+                x.classList.add('fa-bars');
+                $('.dropdown-container').css({
+                    'top': '-' + dropHeight + 'px'
+                });
+                navbarOpen = false;
+            } else {
+                x.classList.remove('fa-bars');
+                x.classList.add('fa-times');
+                $('.dropdown-container').css({
+                    'top': '130px'
+                });
+                navbarOpen = true;
+            }
+        }
 
         function refreshPage() {
             location.replace('index.html');
@@ -651,7 +825,7 @@
         function discordRedir() {
             window.open('https://discordapp.com/users/730376000470384681/');
         }
-        // alert($('.skills').width());
+        // alert($(window).width());
     </script>
 </body>
 </html>
