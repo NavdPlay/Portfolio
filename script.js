@@ -1,4 +1,4 @@
-AOS.init();
+AOS.init({ disable: 'mobile' });
 
 var navbarOpen = false;
 var exp = {
