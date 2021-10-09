@@ -55,6 +55,14 @@ function mobileNavbar(x) {
     }
 }
 
+function linkClick() {
+    document.getElementById('menu-icon').classList.remove('fa-times');
+    document.getElementById('menu-icon').classList.add('fa-bars');
+    $('.dropdown-container').css({
+        'top': '-' + dropHeight + 'px'
+    }); 
+}
+
 function refreshPage() {
     location.replace('index.html');
 }
