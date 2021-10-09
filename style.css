@@ -57,7 +57,7 @@
 }
  .dropdown-container {
      color: white;
-     position: absolute;
+     position: fixed;
      right: 15px;
      background-color: #040014;
      height: 100px;
@@ -583,6 +583,7 @@
          top: 160px;
          transform: translate(-50%, 0);
          line-height: 17.5px;
+         text-align: center;
     }
      .side-img {
          margin-top: 30px;
