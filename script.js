@@ -65,7 +65,7 @@ function linkClick() {
 }
 
 function copyQuote() {
-    navigator.clipboard.writeText('"Unleash your imagination, and be an inspiration"');
+    navigator.clipboard.writeText('Unleash your imagination, and be an inspiration');
     $('.copy-text').html('Copied!');
 }
 
