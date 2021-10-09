@@ -1,6 +1,4 @@
-AOS.init({
-    disable: 'mobile'
-});
+AOS.init({ disable: 'mobile' });
 
 var navbarOpen = false;
 var exp = {
@@ -29,6 +27,7 @@ $('.projects').click(function() {
     var rep = $(this).attr('data-value');
     window.open('https://navdplay.github.io/' + rep + '/');
 });
+
 var headHeight = $('.header-container').height();
 var dropLinkHeight = $('.dropdown-links').height();
 var dropHeight = ((dropLinkHeight + 35) * 3);
@@ -45,7 +44,7 @@ function mobileNavbar(x) {
         $('.dropdown-container').css({
             'top': '-' + dropHeight + 'px'
         });
-        navbarOpen = false;
+         navbarOpen = false;
     } else {
         x.classList.remove('fa-bars');
         x.classList.add('fa-times');
@@ -61,16 +60,7 @@ function linkClick() {
     document.getElementById('menu-icon').classList.add('fa-bars');
     $('.dropdown-container').css({
         'top': '-' + dropHeight + 'px'
-    });
-}
-
-function copyQuote() {
-    navigator.clipboard.writeText('Unleash your imagination, and be an inspiration');
-    $('.copy-text').html('Copied!');
-}
-
-function funcOut() {
-    $('.copy-text').html('Copy to clipboard');
+    }); 
 }
 
 function refreshPage() {
