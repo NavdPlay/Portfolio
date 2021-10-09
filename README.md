@@ -23,3 +23,4 @@ Other libraries:
 - AOS (Animate On Scroll)
 - Typed.js
 #
+Link demo: navdplay.github.io/Portfolio
