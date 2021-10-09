@@ -1,4 +1,4 @@
- @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@600&display=swap');
  @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
  ::-webkit-scrollbar {
      width: 12.5px;
@@ -137,36 +137,6 @@
      border-radius: 5px;
      transform: scaleX(1.003);
 }
-.copy-container {
-     background-color: #040014;
-     height: 40px;
-     color: white;
-     border-radius: 7px;
-     position: absolute;
-     z-index: 1;
-     top: 50px;
-     left: 50%;
-     transform: translate(-50%, 0);
-     opacity: 0;
-     transition: 0.3s;
-     text-align: center;
- }
- .copy-container::before {
-     content: "";
-     position: absolute;
-     bottom: 99%;
-     left: 50%;
-     margin-left: -5px;
-     border-width: 6px;
-     border-style: solid;
-     border-color: transparent transparent #040014 transparent;
- }
- .copy-text {
-     margin: 10px;
- }
- .quote-container:hover .copy-container {
-     opacity: 1;
- }
  .quote {
      font-family: 'Roboto Mono', monospace;
      -webkit-user-select: none;
