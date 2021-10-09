@@ -63,6 +63,16 @@ function linkClick() {
     }); 
 }
 
+function copyQuote() {
+    navigator.clipboard.writeText('"Unleash your imagination, and be an inspiration"');
+    $('.copy-text').html('Copied!');
+}
+
+function funcOut() {
+    $('.copy-text').html('Copy to clipboard');
+}
+
+
 function refreshPage() {
     location.replace('index.html');
 }
