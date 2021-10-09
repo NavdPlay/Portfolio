@@ -353,6 +353,9 @@
         #skill-divide-2 {
             display: none;
         }
+        .skill-divide-4 {
+            display: none;
+        }
         .skills:hover {
             box-shadow: 0 7px 18px rgba(0, 0, 0, 0.4);
             transform: scale(1.05);
@@ -545,6 +548,9 @@
             .content-container {
                 margin-top: 8.85vw;
             }
+            .content-desc {
+                font-size: 20px;
+            }
             #typed {
                 font-size: 27px;
                 top: 85%;
@@ -616,12 +622,69 @@
                 height: 210px;
                 width: 210px;
             }
-        }
-        /* @media only screen and (max-width: 425px) {
-            .header-container {
-                height: 6.8vh;
+            .quote {
+                font-size: 2.9vw;
             }
-        } */
+        }
+        @media only screen and (max-width: 426px) {
+            #typed {
+                width: 85vw;
+            }
+            .skills-box {
+                margin-top: 350px;
+            }
+            .skill-divide-4 {
+                display: block;
+            }
+            .skills {
+                height: 120px;
+                width: 80vw;
+                left: 57.5%;
+                transform: translate(-60%, 0);
+            }
+            .skills:hover {
+                transform: scale(1.05) translate(-57% ,0);
+            }
+            .category-desc {
+                font-size: 20px;
+                margin-left: -10px;
+            }
+            .skill-icon {
+                font-size: 55px;
+            }
+            .skill-desc {
+                bottom: 7.5vw;
+                font-size: 15px;
+            }
+            .skill-exp {
+                bottom: 3vw;
+                font-size: 13px;
+            }
+            .skill-img {
+                width: 50px;
+                height: 50px;
+                margin-top: 0;
+            }
+            .projects {
+                width: 80vw;
+                left: 57.5%;
+                transform: translate(-60%, 0);
+            }
+            .projects:hover {
+                transform: scale(1.05) translate(-57% ,0);
+            }
+            .project-text > h2 {
+                font-size: 5.3vw;
+            }
+            .project-text > i {
+                font-size: 7vw;
+            }
+        }
+        @media only screen and (max-width: 375px) {
+            .skills-box {
+                margin-top: 400px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -680,6 +743,7 @@
                         <h3 class="skill-desc skill-texts">HTML5</h3>
                         <p class="skill-exp skill-texts" id="html-exp"></p>
                     </div>
+                    <br class="skill-divide-4">
                     <div class="skills" id="skill2">
                         <i class="fab fa-css3-alt skill-icon"></i>
                         <h3 class="skill-desc skill-texts">CSS3</h3>
@@ -691,6 +755,7 @@
                         <h3 class="skill-desc skill-texts">JavaScript</h3>
                         <p class="skill-exp skill-texts" id="js-exp"></p>
                     </div>
+                    <br class="skill-divide-4">
                     <div class="skills" id="skill4">
                         <img src="https://i.ibb.co/q0Vywcd/jquery1.png" alt="JQuery" class="skill-img">
                         <h3 class="skill-desc skill-texts">JQuery</h3>
@@ -729,7 +794,6 @@
             </div>
         </div>
         <div class="footer">
-            <!-- https://discordapp.com/users/730376000470384681/ -->
             <div class="footer-box">
                 <i class="fab fa-instagram footer-icon" id="instagram" onclick="instagramRedir()"></i>
             </div>
@@ -787,7 +851,6 @@
             'top': '-' + dropHeight + 'px'
         });
 
-
         function mobileNavbar(x) {
             if (navbarOpen) {
                 x.classList.remove('fa-times');
@@ -800,7 +863,7 @@
                 x.classList.remove('fa-bars');
                 x.classList.add('fa-times');
                 $('.dropdown-container').css({
-                    'top': '130px'
+                    'top': '40px'
                 });
                 navbarOpen = true;
             }
