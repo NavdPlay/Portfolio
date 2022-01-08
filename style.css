@@ -238,17 +238,17 @@
  #project1 {
      background: url('https://i.ibb.co/phMJMhX/RandCol.png');
      background-size: cover;
-     background-position: center center;
+     background-position: center bottom;
 }
  #project2 {
      background: url('https://i.ibb.co/nD1fhCc/Login.png');
      background-size: cover;
-     background-position: center center;
+     background-position: center bottom;
 }
  #project3 {
      background: url('https://i.ibb.co/f1Ydp4Q/Aidenify.png');
      background-size: cover;
-     background-position: center center;
+     background-position: center bottom;
 }
  .projects-box {
      margin-bottom: 100px;
