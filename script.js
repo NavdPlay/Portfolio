@@ -5,7 +5,7 @@ var exp = {
     html: 2019,
     css: 2019,
     js: 2020,
-    jquery: 2020
+    php: 2021
 };
 
 var typed = new Typed('#typed', {
@@ -20,7 +20,7 @@ var currentYear = date.getFullYear();
 $('#html-exp').html(`${currentYear - exp.html} > years`);
 $('#css-exp').html(`${currentYear - exp.css} > years`);
 $('#js-exp').html(`${currentYear - exp.js} years`);
-$('#jquery-exp').html(`${currentYear - exp.jquery} > years`);
+$('#php-exp').html(`${currentYear - exp.php} > years`);
 $('.copyright').html(`© ${currentYear} NavdPlay. All Rights Reserved`);
 
 $('.projects').click(function() {
