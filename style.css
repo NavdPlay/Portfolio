@@ -236,39 +236,19 @@
      box-shadow: 0 15px 18px rgba(0, 0, 0, 0.4);
 }
  #project1 {
-     background: url('https://i.ibb.co/ncS80fs/order-Makanan.png');
-     background-size: cover;
-     background-position: left top;
-}
- #project2 {
-     background: url('https://i.ibb.co/VjcHxTg/penumpang.png');
-     background-size: cover;
-     background-position: left top;
-}
- #project3 {
-     background: url('https://i.ibb.co/CMWMTRr/toDo.png');
-     background-size: cover;
-     background-position: center top;
-}
- #project4 {
-     background: url('https://i.ibb.co/12BSTtB/LoveCalc.png');
-     background-size: cover;
-     background-position: left top;
-}
- #project5 {
      background: url('https://i.ibb.co/phMJMhX/RandCol.png');
      background-size: cover;
-     background-position: center top;
+     background-position: center center;
 }
- #project6 {
+ #project2 {
      background: url('https://i.ibb.co/nD1fhCc/Login.png');
      background-size: cover;
-     background-position: center top;
+     background-position: center center;
 }
-#project7 {
+ #project3 {
      background: url('https://i.ibb.co/f1Ydp4Q/Aidenify.png');
      background-size: cover;
-     background-position: center top;
+     background-position: center center;
 }
  .projects-box {
      margin-bottom: 100px;
