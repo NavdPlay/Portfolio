@@ -72,13 +72,13 @@ function githubRedir() {
 }
 
 function instagramRedir() {
-    window.open('https://instagram.com/NavdPlay/');
+    window.open('https://instagram.com/nerosann_/');
 }
 
 function tiktokRedir() {
-    window.open('https://tiktok.com/@navdplay/');
+    window.open('https://tiktok.com/@nerosann_/');
 }
 
 function discordRedir() {
-    window.open('https://discordapp.com/users/730376000470384681/');
+    window.open('https://discordapp.com/users/685465239440982016/');
 }
